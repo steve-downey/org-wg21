@@ -1,0 +1,55 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
+#+options: html5-fancy:t
+#+title: Special Blocks and Emacs Org-mode Export
+#+date: <2021-12-03 Fri>
+#+author: Steve Downey
+#+email: sdowney@sdowney.org
+#+select_tags: export
+#+language: en
+#+exclude_tags: noexport
+#+creator: Emacs 28.0.60 (Org mode 9.4.6)
+#+HTML_DOCTYPE: html5
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:nil html-preamble:t
+#+OPTIONS: html-scripts:t html-style:t html5-fancy:t tex:t
+
+- Document number:
+- Date:  {{{date(%Y-%m-%d)}}}
+- Author: Steve Downey <sdowney2@bloomberg.net>, <sdowney@gmail.com>
+- Audience: WG21 Emacs Authors
+
+#+BEGIN_ABSTRACT
+Abstract: Making emacs org-mode more usable for writing WG21 papers.
+#+END_ABSTRACT
+
+
+
+
+* Delete blocks and text
+#+begin_delete
+Remove this terrible old stuff.
+#+end_delete
+And the bad [[delete:][word]] from this sentence.
+
+* Insert blocks and text
+#+begin_insert
+Add this wonderful new text
+#+end_insert
+And put this cool [[insert:][word]] in.
+
+
+* Comparison Table
+#+begin_cmptbl :before "Old Busted" :after "New Hotness"
+#+begin_cmptblcell
+#+begin_src C++
+int a = 1 + 2 + 3;
+#+end_src
+#+end_cmptblcell
+#+begin_cmptblcell
+#+begin_src C++
+int a = cool_sum({1, 2, 3});
+#+end_src
+#+end_cmptblcell
+#+end_cmptbl
